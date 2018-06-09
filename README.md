@@ -1,7 +1,7 @@
 ## .NET Mailgun API wrapper
 This is a library for sending email and working with mailing lists via Mailgun API.
 
-It is compatible with both .Net Core and .Net Framefork.
+It is compatible with both .Net Core and .Net Framework.
 ## How to use
 First of all, you need to create a [Mailgun account](https://www.mailgun.com/), create a domain that will be used to send emails, and get an API key for your account. Then you can use this library to send emails from your domain.
 #### Create a Mailgun instanse
@@ -64,7 +64,7 @@ var result = await mailgun.SendMessageToListAsync(
                 "news",                                                // Mailing list
                 new Member("support@your-domain.com", "Support Team"), // From
                 "Welcome",                                             // Subject
-                "Welcome, dear users!");                                // Message
+                "Welcome, dear users!");                               // Message
 ```
 #### Unsubscribe member from list
 ```csharp
