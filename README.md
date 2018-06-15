@@ -2,10 +2,10 @@
 This is a library for sending email and working with mailing lists via Mailgun API.
 
 It is compatible with both .Net Core and .Net Framework.
+## Install
+`PM> Install-Package PureApi.Mailgun`
 ## How to use
 First of all, you need to create a [Mailgun account](https://www.mailgun.com/), create a domain that will be used to send emails, and get an API key for your account. Then you can use this library to send emails from your domain.
-#### Install package
-`PM> Install-Package PureApi.Mailgun`
 #### Create a Mailgun instanse
 ```csharp
 var mailgun = new Mailgun("sending-domain.com", "api-key");
