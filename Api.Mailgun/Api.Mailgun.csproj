@@ -2,7 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>Maksim Strebkov</Authors>
+    <Authors>Groxan</Authors>
+    <PackageId>PureApi.Mailgun</PackageId>
+    <PackageTags>api mail email mailgun</PackageTags>
+    <Description>.NET Standard 2.0 library for sending email and working with mailing lists via Mailgun API</Description>
+    <PackageProjectUrl>https://github.com/Groxan/Api.Mailgun</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Product>PureApi.Mailgun</Product>
+    <Company />
+    <Copyright />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\Api.Mailgun.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

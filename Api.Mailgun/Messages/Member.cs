@@ -23,7 +23,7 @@ namespace Api.Mailgun
         /// Member name, formatted as 'Name <Email>' or 'Email'
         /// </summary>
         public string FullName
-            => string.IsNullOrEmpty(Name) ? Email : $"{Name} <{Email}>";
+            => string.IsNullOrEmpty(Name) ? Email : $"\"{Name}\" <{Email}>";
 
         /// <summary>
         /// Creates an instance of the Member
