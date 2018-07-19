@@ -15,10 +15,10 @@ You can send email messages with any parameters, that supported by [Mailgun API.
 #### Send simple message
 ```csharp
 var result = await mailgun.SendMessageAsync(
-                new Member("support@your-domain.com", "Support Team"), // From
-                new Member("user@gmail.com"),                          // To
-                "Welcome",                                             // Subject
-                "Welcome, dear user!");                                // Message
+                new EmailAddress("support@your-domain.com", "Support Team"), // From
+                new EmailAddress("user@gmail.com"),                          // To
+                "Welcome",                                                   // Subject
+                "Welcome, dear user!");                                      // Message
 
 if (!result.Successful)
     Console.WriteLine(result.ErrorMessage);
@@ -27,15 +27,15 @@ if (!result.Successful)
 ```csharp
 var message = new Message()
 {
-    From = new Member("support@your-domain.com", "Support Team"),
-    To = new List<Member>()
+    From = new EmailAddress("support@your-domain.com", "Support Team"),
+    To = new List<EmailAddress>()
     {
-        new Member("user1@gmail.com"),
-        new Member("user2@gmail.com")
+        new EmailAddress("user1@gmail.com"),
+        new EmailAddress("user2@gmail.com")
     },
-    Cc = new List<Member>()
+    Cc = new List<EmailAddress>()
     {
-        new Member("user3@gmail.com")
+        new EmailAddress("user3@gmail.com")
     },
     Attachments = new List<Attachment>()
     {
@@ -63,10 +63,10 @@ var result = await mailgun.AddMemberToListAsync("news", "user@gmail.com");
 #### Send simple message to all members in list
 ```csharp
 var result = await mailgun.SendMessageToListAsync(
-                "news",                                                // Mailing list
-                new Member("support@your-domain.com", "Support Team"), // From
-                "Welcome",                                             // Subject
-                "Welcome, dear users!");                               // Message
+                "news",                                                      // Mailing list
+                new EmailAddress("support@your-domain.com", "Support Team"), // From
+                "Welcome",                                                   // Subject
+                "Welcome, dear users!");                                     // Message
 ```
 #### Unsubscribe member from list
 ```csharp
