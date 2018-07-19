@@ -8,7 +8,7 @@ namespace Api.Mailgun.Http
     /// <summary>
     /// Renewable HttpClient with the specified basic access authentication header
     /// </summary>
-    public class RenewableHttpClientAuth : RenewableHttpClient
+    class RenewableHttpClientAuth : RenewableHttpClient
     {
         /// <summary>
         /// Basic access authentication header

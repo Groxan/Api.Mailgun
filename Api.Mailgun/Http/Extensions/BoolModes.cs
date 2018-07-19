@@ -5,7 +5,7 @@ namespace Api.Mailgun.Http
     /// <summary>
     /// Defines how bool will be converted to string
     /// </summary>
-    public enum BoolModes
+    enum BoolModes
     {
         /// <summary>
         /// Convert true to 'True', false to 'False'

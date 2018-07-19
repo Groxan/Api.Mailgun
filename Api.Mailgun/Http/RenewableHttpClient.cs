@@ -6,7 +6,7 @@ namespace Api.Mailgun.Http
     /// <summary>
     /// Wrapper for HttpClient with autorenew of the HttpClient due to a DNS udpates issue.
     /// </summary>
-    public class RenewableHttpClient
+    class RenewableHttpClient
     {
         private HttpClient _Client;
         private DateTime _Expiration;

@@ -7,7 +7,7 @@ namespace Api.Mailgun.Http
     /// <summary>
     /// Extensions for easy addition the mailgun api request fields as multipart form data
     /// </summary>
-    public static class MultipartFormDataContentExtension
+    static class MultipartFormDataContentExtension
     {
         /// <summary>
         /// Add bool value as string content. Null value will not be added.
@@ -76,11 +76,11 @@ namespace Api.Mailgun.Http
         /// <param name="content">Target content</param>
         /// <param name="key">The name of the content to add</param>
         /// <param name="value">The content to add to the collection</param>
-        public static void Add(this MultipartFormDataContent content, string key, Member value)
+        public static void Add(this MultipartFormDataContent content, string key, EmailAddress value)
         {
             if (value != null)
             {
-                content.Add(new StringContent(value.FullName), key);
+                content.Add(new StringContent(value.ToString()), key);
             }
         }
 
@@ -90,12 +90,12 @@ namespace Api.Mailgun.Http
         /// <param name="content">Target content</param>
         /// <param name="key">The name of the content to add</param>
         /// <param name="values">The contents to add to the collection</param>
-        public static void Add(this MultipartFormDataContent content, string key, IEnumerable<Member> values)
+        public static void Add(this MultipartFormDataContent content, string key, IEnumerable<EmailAddress> values)
         {
             if (values != null)
             {
                 foreach (var value in values)
-                    content.Add(new StringContent(value.FullName), key);
+                    content.Add(new StringContent(value.ToString()), key);
             }
         }
 

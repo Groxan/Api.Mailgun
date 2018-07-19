@@ -11,25 +11,25 @@ namespace Api.Mailgun
         /// <summary>
         /// Sender of the message
         /// </summary>
-        public Member From
+        public EmailAddress From
         { get; set; }
 
         /// <summary>
         /// Recipient(s) of the message
         /// </summary>
-        public List<Member> To
+        public List<EmailAddress> To
         { get; set; }
 
         /// <summary>
         /// Cc (carbon copy) recipient(s) of the message
         /// </summary>
-        public List<Member> Cc
+        public List<EmailAddress> Cc
         { get; set; }
 
         /// <summary>
         /// Bcc (blind carbon copy) recipient(s) of the message
         /// </summary>
-        public List<Member> Bcc
+        public List<EmailAddress> Bcc
         { get; set; }
 
         /// <summary>
