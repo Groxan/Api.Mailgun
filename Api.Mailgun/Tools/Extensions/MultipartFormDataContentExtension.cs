@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 
-namespace Api.Mailgun.Http
+namespace Api.Mailgun
 {
     /// <summary>
     /// Extensions for easy addition the mailgun api request fields as multipart form data
@@ -145,7 +144,7 @@ namespace Api.Mailgun.Http
         /// Add multiple custom email message headers as string contents. Null value will not be added.
         /// </summary>
         /// <param name="content">Target content</param>
-        /// <param name="value">The custom email message headers to add to the collection. Headers names will be prefixed with "h:" automatically.</param>
+        /// <param name="values">The custom email message headers to add to the collection. Headers names will be prefixed with "h:" automatically.</param>
         public static void Add(this MultipartFormDataContent content, IEnumerable<CustomHeader> values)
         {
             if (values != null)
@@ -172,7 +171,7 @@ namespace Api.Mailgun.Http
         /// Add multiple custom email message data as string contents. Null value will not be added.
         /// </summary>
         /// <param name="content">Target content</param>
-        /// <param name="value">The custom email message data to add to the collection. Data names will be prefixed with "v:" automatically.</param>
+        /// <param name="values">The custom email message data to add to the collection. Data names will be prefixed with "v:" automatically.</param>
         public static void Add(this MultipartFormDataContent content, IEnumerable<CustomData> values)
         {
             if (values != null)

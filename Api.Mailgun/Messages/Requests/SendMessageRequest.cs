@@ -2,9 +2,7 @@
 using System.Net.Http;
 using System.Runtime.Serialization;
 
-using Api.Mailgun.Http;
-
-namespace Api.Mailgun.Requests
+namespace Api.Mailgun
 {
     /// <summary>
     /// Response to the send message request
@@ -25,7 +23,7 @@ namespace Api.Mailgun.Requests
         public string Status { get; set; }
     }
 
-    class SendMessageRequest : HttpRequestMessage
+    class SendMessageRequest : HttpRequest<SendMessageResponse>
     {
         public SendMessageRequest(string baseUri, string workDomain, Message message)
         {

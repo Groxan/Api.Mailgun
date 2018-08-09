@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Api.Mailgun
+namespace Api.Mailgun.MailingLists
 {
     /// <summary>
     /// Mailing list member

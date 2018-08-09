@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 
-namespace Api.Mailgun.Tools
+namespace Api.Mailgun
 {
     /// <summary>
     /// Helper for serializing json

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Api.Mailgun.Http
+﻿namespace Api.Mailgun
 {
     /// <summary>
     /// Defines how bool will be converted to string

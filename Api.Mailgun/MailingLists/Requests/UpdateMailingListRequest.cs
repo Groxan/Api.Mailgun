@@ -2,9 +2,7 @@
 using System.Net.Http;
 using System.Runtime.Serialization;
 
-using Api.Mailgun.Http;
-
-namespace Api.Mailgun.Requests
+namespace Api.Mailgun.MailingLists
 {
     /// <summary>
     /// Response to the mailing list update request
@@ -25,7 +23,7 @@ namespace Api.Mailgun.Requests
         public string Status { get; set; }
     }
 
-    class UpdateMailingListRequest : HttpRequestMessage
+    class UpdateMailingListRequest : HttpRequest<UpdateMailingListResponse>
     {
         public UpdateMailingListRequest(string baseUri, string workDomain, string list, string alias, string name, string description, AccessLevels? access)
         {

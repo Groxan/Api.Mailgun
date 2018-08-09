@@ -2,9 +2,7 @@
 using System.Net.Http;
 using System.Runtime.Serialization;
 
-using Api.Mailgun.Http;
-
-namespace Api.Mailgun.Requests
+namespace Api.Mailgun.MailingLists
 {
     /// <summary>
     /// Response to the mailing list creation request
@@ -25,7 +23,7 @@ namespace Api.Mailgun.Requests
         public string Status { get; set; }
     }
 
-    class CreateMailingListRequest : HttpRequestMessage
+    class CreateMailingListRequest : HttpRequest<CreateMailingListResponse>
     {
         public CreateMailingListRequest(string baseUri, string workDomain, string alias, string name, string description, AccessLevels access)
         {

@@ -22,4 +22,8 @@
     <DocumentationFile>bin\Release\netstandard2.0\Api.Mailgun.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\Api.Mailgun.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

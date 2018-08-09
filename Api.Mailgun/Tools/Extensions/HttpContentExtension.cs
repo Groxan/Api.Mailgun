@@ -1,9 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 
-using Api.Mailgun.Tools;
-
-namespace Api.Mailgun.Http
+namespace Api.Mailgun
 {
     /// <summary>
     /// Extensions for reading HttpContent

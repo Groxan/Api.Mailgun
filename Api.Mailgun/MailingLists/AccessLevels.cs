@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Api.Mailgun
+﻿namespace Api.Mailgun.MailingLists
 {
     /// <summary>
     /// Defines how users can interact with the mailing list

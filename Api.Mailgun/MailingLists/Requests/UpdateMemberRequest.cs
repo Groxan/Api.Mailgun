@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Runtime.Serialization;
 
-using Api.Mailgun.Http;
-using Api.Mailgun.Tools;
-
-namespace Api.Mailgun.Requests
+namespace Api.Mailgun.MailingLists
 {
     /// <summary>
-    /// Response to the add mailing list member request
+    /// Response to the mailing list member update request
     /// </summary>
     [DataContract]
-    public class AddMemberResponse
+    public class UpdateMemberResponse
     {
         /// <summary>
-        /// Created mailing list member
+        /// Updated mailing list member
         /// </summary>
         [DataMember(Name = "member")]
         public MailingListMember Member { get; set; }
@@ -27,19 +24,18 @@ namespace Api.Mailgun.Requests
         public string Status { get; set; }
     }
 
-    class AddMemberRequest : HttpRequestMessage
+    class UpdateMemberRequest : HttpRequest<UpdateMemberResponse>
     {
-        public AddMemberRequest(string baseUri, string workDomain, string list, string email, string name, Dictionary<string, string> vars, bool? subscribed, bool? upsert)
+        public UpdateMemberRequest(string baseUri, string workDomain, string list, string member, string email, string name, Dictionary<string, string> vars, bool? subscribed)
         {
-            Method = HttpMethod.Post;
-            RequestUri = new Uri($"{baseUri}/lists/{list}@{workDomain}/members");
+            Method = HttpMethod.Put;
+            RequestUri = new Uri($"{baseUri}/lists/{list}@{workDomain}/members/{member}");
             Content = new MultipartFormDataContent
             {
                 { "address", email },
                 { "name", name },
                 { "vars", Json.Serialize(vars) },
-                { "subscribed", subscribed, BoolModes.YesNo },
-                { "upsert", upsert, BoolModes.YesNo }
+                { "subscribed", subscribed, BoolModes.YesNo }
             };
         }
     }

@@ -53,7 +53,7 @@
                     message = "Server Errors - something is wrong on Mailgun’s end";
                     break;
                 default:
-                    message = $"Unknown response status code: {statusCode}";
+                    message = $"Unexpected response status code: {statusCode}";
                     break;
             }
 

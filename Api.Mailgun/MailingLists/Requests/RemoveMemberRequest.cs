@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Runtime.Serialization;
 
-namespace Api.Mailgun.Requests
+namespace Api.Mailgun.MailingLists
 {
     /// <summary>
     /// Response to the mailing list member removing request
@@ -36,7 +36,7 @@ namespace Api.Mailgun.Requests
         public string Address { get; set; }
     }
 
-    class RemoveMemberRequest : HttpRequestMessage
+    class RemoveMemberRequest : HttpRequest<RemoveMemberResponse>
     {
         public RemoveMemberRequest(string baseUri, string workDomain, string list, string member)
         {
