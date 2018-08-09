@@ -1,10 +1,14 @@
 ## .NET Mailgun API wrapper
-This is a library for working with Mailgun API. Currently supports:
+This is a library for working with Mailgun API. It is compatible with both .Net Core and .Net Framework.
+
+Currently supports:
 - Messaging (see [examples](#sending-email));
 - Mailing lists (see [examples](#working-with-mailing-lists));
 - Routes (see [examples](#working-with-routes)).
 
-It is compatible with both .Net Core and .Net Framework.
+#### Feature request
+The current version of the library satisfies all my needs. Additional features will be implemented when someone ask for it. So if you need some feature, you may create an "Issue" and describe what you want.
+
 ## Install
 `PM> Install-Package PureApi.Mailgun`
 ## How to use
