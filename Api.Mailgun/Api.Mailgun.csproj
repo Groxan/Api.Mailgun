@@ -5,7 +5,7 @@
     <Authors>Groxan</Authors>
     <PackageId>PureApi.Mailgun</PackageId>
     <PackageTags>api mail email mailgun</PackageTags>
-    <Description>.NET Standard 2.0 library for sending email and working with mailing lists via Mailgun API</Description>
+    <Description>.NET Standard 2.0 library for sending email and working with Mailgun API</Description>
     <PackageProjectUrl>https://github.com/Groxan/Api.Mailgun</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Product>PureApi.Mailgun</Product>
@@ -15,7 +15,7 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/Groxan/Api.Mailgun/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/Groxan/Api.Mailgun.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
