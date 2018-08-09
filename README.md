@@ -1,8 +1,8 @@
 ## .NET Mailgun API wrapper
 This is a library for working with Mailgun API. Currently supports:
-- Messaging;
-- Mailing lists;
-- Routes.
+- Messaging (see [examples](#sending-email));
+- Mailing lists (see [examples](#working-with-mailing-lists));
+- Routes (see [examples](#working-with-routes)).
 
 It is compatible with both .Net Core and .Net Framework.
 ## Install
@@ -76,4 +76,16 @@ var result = await mailgun.SendMessageToListAsync(
 #### Unsubscribe member from list
 ```csharp
 var result = await mailgun.Lists.UpdateMemberStatusAsync("news", "user@gmail.com", false);
+```
+### Working with routes
+Mailgun Routes are a powerful way to handle the incoming traffic. 
+
+Routes API methods are available in the `RouteManager` class. It's recommended to use the `RouteFilters` helper class to create filter expressions and the `RouteActions` helper class to create a set of actions.
+```csharp
+var result = await mailgun.Routes.CreateRouteAsync(
+                RouteFilters.MatchRecipient(".*@bar.com"), 
+                RouteActions.AddForward("http://callback.com").AddStore());
+
+if (result.Successful)
+    Console.WriteLine(result.Response.Route.Id);
 ```
