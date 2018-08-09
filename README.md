@@ -1,5 +1,8 @@
 ## .NET Mailgun API wrapper
-This is a library for sending email and working with mailing lists via Mailgun API.
+This is a library for working with Mailgun API. Currently supports:
+- Messaging;
+- Mailing lists;
+- Routes.
 
 It is compatible with both .Net Core and .Net Framework.
 ## Install
@@ -52,13 +55,15 @@ var result = await mailgun.SendMessageAsync(message);
 ```
 ### Working with mailing lists
 Mailing Lists provide a convenient way to send to multiple recipients by using an alias email address. Mailgun sends a copy of the message sent to the alias address to each subscribed member of the Mailing List.
+
+Mailing Lists API methods are available in the `MailingListManager` class.
 #### Create new mailing list
 ```csharp
-var result = await mailgun.CreateMailingListAsync("news");
+var result = await mailgun.Lists.CreateMailingListAsync("news");
 ```
 #### Subscribe member to list
 ```csharp
-var result = await mailgun.AddMemberToListAsync("news", "user@gmail.com");
+var result = await mailgun.Lists.AddMemberToListAsync("news", "user@gmail.com");
 ```
 #### Send simple message to all members in list
 ```csharp
@@ -70,5 +75,5 @@ var result = await mailgun.SendMessageToListAsync(
 ```
 #### Unsubscribe member from list
 ```csharp
-var result = await mailgun.UpdateMemberStatusAsync("news", "user@gmail.com", false);
+var result = await mailgun.Lists.UpdateMemberStatusAsync("news", "user@gmail.com", false);
 ```
