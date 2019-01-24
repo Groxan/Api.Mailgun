@@ -1,4 +1,9 @@
 ## .NET Mailgun API wrapper
+
+<a href="https://www.nuget.org/packages/PureApi.Mailgun/"><img src="https://img.shields.io/nuget/v/PureApi.Mailgun.svg" /></a>
+<a href="https://www.nuget.org/packages/PureApi.Mailgun/"><img src="https://img.shields.io/nuget/dt/PureApi.Mailgun.svg" /></a>
+<a href="https://github.com/Groxan/Api.Mailgun/blob/master/LICENSE"><img src="https://img.shields.io/github/license/groxan/Api.Mailgun.svg" /></a>
+
 This is a library for working with Mailgun API. It is compatible with both .Net Core and .Net Framework.
 
 Currently supports:
